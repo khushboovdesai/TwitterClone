@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ --> <base href="/">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <title>Initial Twitter Clone App</title>
+
+</head>
+
+<body>
+
+<div class="container" ng-controller = "home">
+    <h1>Hello from Twitter!</h1>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Log in</button>
+
+    <div class="modal fade"  id="loginModal"  tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header card-header">
+                    <h5 class="modal-title" id="labelId">Log in to Twitter</h5>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputUserInfo" ng-model = "userInfo" placeholder="Phone, email or username" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="inputPassword" ng-model = "password" placeholder="Password" required>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary" ng-click = "submit()" >Log in</button>
+                            <input type="checkbox" aria-label="Checkbox for following text input">
+                            <label>
+                                Remember me
+                            </label>
+                            <a href=""><label for="inputPassword"> . Forgot Password?</label></a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer card-footer">
+                    <div class="clearfix mobile has-sms">
+                        <p class="signup-helper">
+                            New to Twitter?
+                            <a id="login-signup-link" href="https://twitter.com/signup">Sign up now&#32;&raquo;</a>
+                        </p>
+                        <p class="sms-helper">
+                            Already using Twitter via text message?
+                            <a href="/account/complete">Activate your account&#32;&raquo;</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+
+
+
